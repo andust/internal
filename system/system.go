@@ -1,10 +1,6 @@
 package system
 
-import (
-	"fmt"
-
-	"github.com/andust/internal/config"
-)
+import "github.com/andust/internal/config"
 
 type System struct {
 	name string
@@ -17,9 +13,9 @@ func NewSystem(name string) (*System, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println(name)
+
 	s := &System{
-		name: "sddsdsds",
+		name: name,
 		cfg:  cfg,
 	}
 
