@@ -1,10 +1,15 @@
 package system
 
-import "github.com/andust/internal/config"
+import (
+	"sync"
+
+	"github.com/andust/internal/config"
+)
 
 type System struct {
 	name string
 	cfg  config.SystemConfig
+	Wait *sync.WaitGroup
 }
 
 func NewSystem(name string) (*System, error) {
